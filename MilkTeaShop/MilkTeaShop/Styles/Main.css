@@ -1,0 +1,846 @@
+﻿/* 全局重置 */
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background-color: #f5f7fa; /* 更柔和的背景灰 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* --- 现代导航栏 --- */
+.navbar {
+    background: #ffffff;
+    padding: 0 40px;
+    height: 70px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* 轻微的阴影 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 左右推开 */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 左侧品牌区 */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.brand-logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #d2a679; /* 奶茶主色 */
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+    .nav-link:hover {
+        color: #d2a679;
+    }
+
+/* 右侧按钮区 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 按钮之间的间距 */
+}
+
+/* 通用导航按钮样式 */
+.nav-btn {
+    padding: 8px 20px;
+    border-radius: 20px; /* 圆角胶囊形状 */
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* 购物车按钮 (特殊强调) */
+.btn-cart {
+    background-color: #fef6e9; /* 浅橙色背景 */
+    color: #d2a679;
+    border-color: #fef6e9;
+}
+
+    .btn-cart:hover {
+        background-color: #ffead0;
+        transform: translateY(-2px);
+    }
+
+/* 登录/注册按钮 (空心风格) */
+.btn-outline {
+    background-color: transparent;
+    border-color: #ddd;
+    color: #666;
+}
+
+    .btn-outline:hover {
+        border-color: #d2a679;
+        color: #d2a679;
+    }
+
+/* 注册/退出按钮 (实心风格) */
+.btn-primary {
+    background-color: #d2a679;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #b58b62;
+        box-shadow: 0 4px 10px rgba(210, 166, 121, 0.4);
+        transform: translateY(-2px);
+    }
+
+/* 用户欢迎文字 */
+.welcome-text {
+    font-size: 14px;
+    color: #888;
+    margin-right: 10px;
+}
+
+/* --- 容器与内容 --- */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    min-height: 600px;
+}
+
+/* --- 商品列表相关 (保留之前的卡片样式) --- */
+.search-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-input {
+    padding: 12px 20px;
+    width: 300px;
+    border: 2px solid #eee;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 14px;
+}
+
+    .search-input:focus {
+        border-color: #d2a679;
+    }
+
+.search-btn {
+    padding: 12px 30px;
+    background-color: #d2a679;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+    .search-btn:hover {
+        background-color: #b58b62;
+        transform: scale(1.05);
+    }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        border-color: transparent;
+    }
+
+.card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .card-img {
+    transform: scale(1.08);
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-tag {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.card-price {
+    color: #e74c3c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-add {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .btn-add:hover {
+        background-color: #d2a679;
+    }
+
+.pager-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.pager-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+}
+
+.pager-current {
+    background-color: #d2a679;
+    color: white;
+    border-color: #d2a679;
+}
+
+/* 表单盒子 */
+.form-box {
+    width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+    }
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+
+    .form-control:focus {
+        background: #fff;
+        border-color: #d2a679;
+        outline: none;
+    }
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #d2a679;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+    .btn:hover {
+        background: #b58b62;
+    }
+
+/* --- 购物车专用样式 --- */
+
+/* 购物车布局容器：Flex布局，左边列表，右边结算 */
+.cart-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* 顶部对齐 */
+}
+
+/* 左侧：商品列表区 */
+.cart-list-section {
+    flex: 3; /* 占3份宽度 */
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* 右侧：结算卡片区 */
+.cart-summary-section {
+    flex: 1; /* 占1份宽度 */
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 90px; /* 滚动时吸顶 */
+}
+
+/* 购物车表格美化 */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .cart-table th {
+        text-align: left;
+        color: #888;
+        font-weight: 500;
+        padding: 15px 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    .cart-table td {
+        padding: 20px 10px;
+        border-bottom: 1px solid #f9f9f9;
+        vertical-align: middle;
+    }
+
+/* 商品信息列 */
+.cart-product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.cart-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+/* 数量输入框 */
+.qty-input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* 按钮样式微调 */
+.btn-update {
+    font-size: 12px;
+    color: #d2a679;
+    background: none;
+    border: 1px solid #d2a679;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-update:hover {
+        background: #d2a679;
+        color: white;
+    }
+
+.btn-delete {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+    .btn-delete:hover {
+        color: #c0392b;
+        text-decoration: underline;
+    }
+
+/* 结算卡片文字 */
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.total-price {
+    color: #e74c3c;
+    font-size: 24px;
+}
+
+/* 空购物车状态 */
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+    .empty-cart h3 {
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .empty-cart p {
+        color: #999;
+        margin-bottom: 30px;
+    }
+
+/* --- 新增：购物车数量加减组件 --- */
+.qty-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.btn-qty {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .btn-qty:hover {
+        background-color: #e0e0e0;
+    }
+
+.qty-input-clean {
+    width: 30px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: white;
+}
+
+/* 结算区的输入框样式 */
+.checkout-form-group {
+    margin-bottom: 15px;
+}
+
+.checkout-label {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.checkout-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/* --- 新增：导航栏用户区域美化 --- */
+
+/* 用户面板容器：胶囊状背景 */
+.user-panel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f9f9f9;
+    padding: 5px 15px 5px 20px;
+    border-radius: 30px;
+    border: 1px solid #eee;
+}
+
+/* 欢迎语文字 */
+.welcome-text {
+    font-size: 14px;
+    color: #888;
+}
+
+/* 用户名：加粗+主题色 */
+.username-highlight {
+    color: #d2a679; /* 奶茶色 */
+    font-weight: 800;
+    margin-left: 4px;
+}
+
+/* 分隔线 */
+.user-divider {
+    width: 1px;
+    height: 14px;
+    background-color: #ddd;
+    display: inline-block;
+}
+
+/* 退出按钮：简约风格 */
+.btn-logout-styled {
+    font-size: 13px;
+    color: #999;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+    /* 退出按钮悬停效果：变红 */
+    .btn-logout-styled:hover {
+        color: #e74c3c; /* 红色警示 */
+        background-color: rgba(231, 76, 60, 0.05); /* 极淡的红色背景 */
+    }
+
+/* --- 后台管理表格专用样式 --- */
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .admin-table th {
+        background-color: #f8f9fa;
+        color: #555;
+        font-weight: 600;
+        padding: 15px;
+        text-align: left;
+        border-bottom: 2px solid #eee;
+    }
+
+    .admin-table td {
+        padding: 15px;
+        border-bottom: 1px solid #f9f9f9;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .admin-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .admin-table tr:hover {
+        background-color: #fcfcfc;
+    }
+
+/* 状态徽章 */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+/* 待处理-灰 */
+.status-making {
+    background-color: #cce5ff;
+    color: #004085;
+}
+/* 制作中-蓝 */
+.status-shipping {
+    background-color: #fff3cd;
+    color: #856404;
+}
+/* 配送中-黄 */
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+/* 已完成-绿 */
+
+/* 管理员操作按钮 */
+.btn-action {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #d2a679;
+    margin-right: 5px;
+}
+
+    .btn-action:hover {
+        background-color: #b58b62;
+    }
+/* --- 新增：管理员导航按钮美化 --- */
+.admin-nav-group {
+    display: inline-flex;
+    gap: 10px;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+}
+
+.btn-admin-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 15px;
+    border-radius: 20px; /* 圆润的胶囊形 */
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* 订单管理按钮 - 红色系 */
+.btn-admin-orders {
+    background-color: #fff0f0;
+    color: #e74c3c;
+    border-color: #fadbd8;
+}
+.btn-admin-orders:hover {
+     background-color: #e74c3c;
+     color: white;
+     transform: translateY(-2px);
+     box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+ }
+
+/* 商品管理按钮 - 蓝色系 */
+.btn-admin-products {
+    background-color: #f0f7ff;
+    color: #3498db;
+    border-color: #d6eaf8;
+}
+
+    .btn-admin-products:hover {
+        background-color: #3498db;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+    }
+
+/* --- 新增：订单明细小列表样式 --- */
+.order-detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.mini-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.item-info {
+    font-size: 13px;
+    color: #555;
+    flex-grow: 1;
+}
+
+.item-qty {
+    background-color: #eee;
+    color: #666;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+/* --- 新增：商品管理页专用样式 --- */
+
+/* 添加商品面板 */
+.add-product-panel {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border-top: 4px solid #3498db; /* 蓝色顶条 */
+}
+
+.panel-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 表单网格布局：两列显示 */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-row-full {
+    grid-column: 1 / -1; /* 占满整行 */
+}
+
+.admin-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+    .admin-input:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+/* 蓝色按钮 (用于添加/保存) */
+.btn-blue {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+    .btn-blue:hover {
+        background-color: #2980b9;
+    }
+
+/* 取消按钮 */
+.btn-gray {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+    .btn-gray:hover {
+        background-color: #7f8c8d;
+    }
+
+/* 表格里的编辑输入框 */
+.edit-input {
+    width: 90%;
+    padding: 4px;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+}

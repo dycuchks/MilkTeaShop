@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MilkTeaShop.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>遇见·好茶 - 在线点单</title>
+    <link href="Styles/Main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div class="nav-left">
+                <a href="Default.aspx" class="brand-logo">🧋 遇见·好茶</a>
+                <a href="Default.aspx" class="nav-link">全部饮品</a>
+                
+                <!-- 管理员专属菜单：使用了新的美化样式 -->
+                <asp:Panel ID="phAdmin" runat="server" Visible="false" CssClass="admin-nav-group">
+                    <a href="AdminOrders.aspx" class="btn-admin-nav btn-admin-orders">📋 订单管理</a>
+                    <a href="AdminProducts.aspx" class="btn-admin-nav btn-admin-products">🥤 商品管理</a>
+                </asp:Panel>
+            </div>
+            
+            <div class="nav-right">
+                <asp:Panel ID="phGuest" runat="server">
+                    <a href="Login.aspx" class="nav-btn btn-outline">登录</a>
+                    <a href="Register.aspx" class="nav-btn btn-primary">免费注册</a>
+                </asp:Panel>
+
+                <asp:Panel ID="phUser" runat="server" Visible="false" style="display:flex; align-items:center; gap:15px;">
+                    <a href="Cart.aspx" class="nav-btn btn-cart">🛒 购物车</a>
+                    <div class="user-panel-wrapper">
+                        <span class="welcome-text">
+                            Hi, <span class="username-highlight"><asp:Label ID="lblUser" runat="server"></asp:Label></span>
+                        </span>
+                        <span class="user-divider"></span>
+                        <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" CssClass="btn-logout-styled">
+                            退出 ➔
+                        </asp:LinkButton>
+                    </div>
+                </asp:Panel>
+            </div>
+        </div>
+
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <div style="text-align:center; padding: 40px 0; color: #bbb; font-size: 13px; border-top:1px solid #f5f5f5; margin-top:50px;">
+            &copy; 2026 遇见·好茶 ASP.NET 期末大作业 | 管理员入口测试账号：admin / 123456
+        </div>
+    </form>
+</body>
+</html>

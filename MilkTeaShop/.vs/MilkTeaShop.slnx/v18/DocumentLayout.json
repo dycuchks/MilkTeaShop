@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|e:\\\u4F5C\u4E1A\\asp.net\\\u671F\u672B\\milkteashop\\milkteashop\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|solutionrelative:milkteashop\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\milkteashop\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|solutionrelative:milkteashop\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\milkteashop\\adminproducts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|solutionrelative:milkteashop\\adminproducts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\milkteashop\\adminproducts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{30DB20C0-6DBD-47E5-8D1D-76075374933F}|MilkTeaShop\\MilkTeaShop.csproj|solutionrelative:milkteashop\\adminproducts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SQLQuery1.sql",
+              "DocumentMoniker": "D:\\Desktop\\SQLQuery1.sql",
+              "ToolTip": "D:\\Desktop\\SQLQuery1.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-07T09:24:45.528Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SQLQuery2.sql",
+              "DocumentMoniker": "D:\\Desktop\\SQLQuery2.sql",
+              "ToolTip": "D:\\Desktop\\SQLQuery2.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-07T11:09:39.211Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "MilkTeaShop\\Default.aspx.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\Default.aspx.cs",
+              "RelativeToolTip": "MilkTeaShop\\Default.aspx.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAKcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T02:43:10.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminProducts.aspx.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\AdminProducts.aspx.cs",
+              "RelativeDocumentMoniker": "MilkTeaShop\\AdminProducts.aspx.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\AdminProducts.aspx.cs",
+              "RelativeToolTip": "MilkTeaShop\\AdminProducts.aspx.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAALMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T15:51:56.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminProducts.aspx",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\AdminProducts.aspx",
+              "RelativeDocumentMoniker": "MilkTeaShop\\AdminProducts.aspx",
+              "ToolTip": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\AdminProducts.aspx",
+              "RelativeToolTip": "MilkTeaShop\\AdminProducts.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-07T15:51:37.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\Default.aspx",
+              "RelativeDocumentMoniker": "MilkTeaShop\\Default.aspx",
+              "ToolTip": "E:\\\u4F5C\u4E1A\\ASP.NET\\\u671F\u672B\\MilkTeaShop\\MilkTeaShop\\Default.aspx",
+              "RelativeToolTip": "MilkTeaShop\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-07T10:28:22.153Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
